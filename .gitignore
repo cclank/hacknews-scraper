@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Output files
+output/
+
+# Environment files
+.env
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
