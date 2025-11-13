@@ -1,10 +1,6 @@
 # HN帖子处理脚本 (PowerShell版本)
 # 用法: .\process-hn.ps1 <HN_POST_ID> [-Format <json|md>] [-NoAnalyze]
 
-# 设置输出编码为 UTF-8，确保正确处理中文字符
-$OutputEncoding = New-Object -typename System.Text.UTF8Encoding
-[Console]::OutputEncoding = New-Object -typename System.Text.UTF8Encoding
-
 param(
     [Parameter(Mandatory=$true)]
     [string]$HNPostId,
