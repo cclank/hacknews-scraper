@@ -11,6 +11,7 @@
 
 ## 快速开始
 
+### macOS/Linux
 ```bash
 # 安装依赖
 npm install
@@ -21,6 +22,22 @@ npm install
 # 示例
 ./process-hn.sh 8863 json --no-analyze  # 仅生成prompt并复制到粘贴板
 ./process-hn.sh 8863 json               # 生成prompt并调用Claude分析
+```
+
+### Windows
+```cmd
+# 安装依赖
+npm install
+
+# 使用批处理脚本
+process-hn.bat <HN_POST_ID> [format] [--no-analyze]
+
+# 或使用PowerShell脚本 (推荐)
+powershell -ExecutionPolicy Bypass -File .\process-hn.ps1 <HN_POST_ID> [-Format <json|md>] [-NoAnalyze]
+
+# 示例
+powershell -ExecutionPolicy Bypass -File .\process-hn.ps1 8863 -Format json -NoAnalyze  # 仅生成prompt并复制到粘贴板
+powershell -ExecutionPolicy Bypass -File .\process-hn.ps1 8863 -Format json             # 生成prompt并调用Claude分析
 ```
 
 ## 输出文件
